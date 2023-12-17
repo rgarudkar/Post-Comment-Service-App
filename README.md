@@ -18,6 +18,13 @@ This project is a full-stack web application consisting of the following main co
   - *Posts:* Contains details like comments, created by information, likes, and other relevant data.
   - *Users:* Manages user information.
 
+## Why Firebase Firestore over SQL Database?
+
+- *Flexibility and Scalability:* Firestore's NoSQL structure provides greater flexibility in data modeling, which is particularly beneficial for the dynamic and varied nature of posts and comments. It easily scales with the growing amount of user-generated content without the need for complex database schema migrations.
+- *Real-Time Data Sync:* Firestore offers real-time data synchronization capabilities. This is crucial for our app as it enhances user engagement by instantly updating posts and comments across all user interfaces.
+- *Simplified Development:* Firestore integrates seamlessly with other Firebase services like Authentication and Hosting, streamlining the development process. This integration reduces the time and effort needed for separate setup and maintenance of these services.
+- *Managed Infrastructure:* Being a fully managed service, Firestore reduces the overhead of database administration. It handles tasks like scaling, replication, and backups automatically, allowing us to focus more on feature development.
+
 ### Authentication
 - *Firebase Authentication:* Used for user authentication, including features for sign-in and sign-up.
 
