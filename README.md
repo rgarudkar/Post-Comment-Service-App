@@ -30,7 +30,6 @@ This project is a full-stack web application consisting of the following main co
 
 ### Additional Details
 - *Real-Time Updates:* Leveraging Firebase's capabilities, the app can handle real-time data updates, enhancing user engagement.
-- *Security Rules:* Firebase security rules are implemented to ensure data integrity and user privacy.
 - *Responsive Design:* The React frontend is designed to be responsive, providing a seamless experience across various devices and screen sizes.
 
 ## Getting Started
