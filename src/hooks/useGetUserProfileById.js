@@ -4,6 +4,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "../firebase/firebase";
 import axios from "axios";
 
+//Function to fetch user profile by user id
 const useGetUserProfileById = (userId) => {
   const [isLoading, setIsLoading] = useState(true);
   const [userProfile, setUserProfile] = useState(null);
@@ -14,7 +15,7 @@ const useGetUserProfileById = (userId) => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/user-profile/id/${userId}`
+          `http://localhost:5000/api/user-profile/id/${userId}` //API Get request to get user profile using user id
         );
         setUserProfile(response.data);
       } catch (error) {

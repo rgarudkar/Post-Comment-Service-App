@@ -141,7 +141,7 @@ const ProfilePost = ({ post }) => {
                   overflowY="auto"
                   w="full"
                 >
-                  <Text alt="post content">
+                  <Text align={"center"} alt="post content">
                     {post.content}
                   </Text>
                 </Box>

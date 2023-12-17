@@ -4,7 +4,7 @@ import { auth, firestore } from "../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import useAuthStore from "../store/authStore";
 import useUserProfileStore from "../store/userProfileStore";
-
+//Function Handles login logic by communicationg to database for checking authorization of user
 const useLogin = () => {
   const showToast = useShowToast();
   const [signInWithEmailAndPassword, , loading, error] =
@@ -14,9 +14,10 @@ const useLogin = () => {
   const login = async (inputs) => {
     if (!inputs.email || !inputs.password) {
       return showToast("Error", "Please fill all the fields", "error");
+      
     }
     try {
-      const userCred = await signInWithEmailAndPassword(
+      const userCred = await signInWithEmailAndPassword( //Passes email and password to authenticate
         inputs.email,
         inputs.password
       );

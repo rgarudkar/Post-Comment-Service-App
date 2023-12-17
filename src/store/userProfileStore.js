@@ -8,6 +8,7 @@ const useUserProfileStore = create((set) => ({
 		set((state) => ({
 			userProfile: { ...state.userProfile, posts: [post.id, ...state.userProfile.posts] },
 		})),
+		//this is used to delete post and update post state 
 	deletePost: (postId) =>
 		set((state) => ({
 			userProfile: {

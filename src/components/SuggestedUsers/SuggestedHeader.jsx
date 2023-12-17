@@ -3,6 +3,8 @@ import useLogout from "../../hooks/useLogout";
 import useAuthStore from "../../store/authStore";
 import { Link } from "react-router-dom";
 
+
+//UI for suggested profiles under suggested users
 const SuggestedHeader = () => {
 	const { handleLogout, isLoggingOut } = useLogout();
 	const authUser = useAuthStore((state) => state.user);

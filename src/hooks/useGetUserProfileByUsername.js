@@ -2,18 +2,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import useShowToast from "./useShowToast";
 import useUserProfileStore from "../store/userProfileStore";
-
+//Function fetches user profile using username as argument
 const useGetUserProfileByUsername = (username) => {
   const [isLoading, setIsLoading] = useState(true);
   const showToast = useShowToast();
   const { userProfile, setUserProfile } = useUserProfileStore();
-
   useEffect(() => {
     const getUserProfile = async () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/user-profile/${username}`
+          `http://localhost:5000/api/user-profile/${username}` //API Get request to fetch userprofile using username
         );
         setUserProfile(response.data);
       } catch (error) {

@@ -1,8 +1,9 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box,Text } from "@chakra-ui/react";
 import PostFooter from "./PostFooter";
 import PostHeader from "./PostHeader";
 import useGetUserProfileById from "../../hooks/useGetUserProfileById";
 
+//UI for showing particular post when clicked  on Profile 
 const FeedPost = ({ post }) => {
 	const { userProfile } = useGetUserProfileById(post.createdBy);
 
@@ -10,7 +11,7 @@ const FeedPost = ({ post }) => {
 		<>
 			<PostHeader post={post} creatorProfile={userProfile} />
 			<Box my={2} borderRadius={4} overflow={"hidden"}>
-				<Text alt={"FEED POST TEXT"} >{post.content}</Text>
+				<Text  alt={"FEED POST TEXT"} >{post.content}</Text>
 			</Box>
 			<PostFooter post={post} creatorProfile={userProfile} />
 		</>

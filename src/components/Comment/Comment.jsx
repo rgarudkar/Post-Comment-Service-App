@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { timeAgo } from "../../utils/timeAgo";
 import DOMPurify from "dompurify";
 
+//UI for showing Userprofile and comments in post section
 const Comment = ({ comment }) => {
   const { userProfile, isLoading } = useGetUserProfileById(comment.createdBy);
-  console.log(comment)
   if (isLoading) return <CommentSkeleton />;
   return (
     <Flex gap={4}>
@@ -22,6 +22,7 @@ const Comment = ({ comment }) => {
           </Link>
           {/* Render comment as sanitized HTML */}
           <div
+            //converts text in Richtext format to readable by embedding it into html
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(comment.comment),
             }}
@@ -35,6 +36,7 @@ const Comment = ({ comment }) => {
   );
 };
 
+//UI for loading comments in post section
 export default Comment;
 
 const CommentSkeleton = () => {

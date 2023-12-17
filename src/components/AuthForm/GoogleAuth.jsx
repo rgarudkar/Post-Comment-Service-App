@@ -6,6 +6,7 @@ import useShowToast from "../../hooks/useShowToast";
 import useAuthStore from "../../store/authStore";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 
+//Function to handle signup using google 
 const GoogleAuth = ({ prefix }) => {
 	const [signInWithGoogle, , , error] = useSignInWithGoogle(auth);
 	const showToast = useShowToast();

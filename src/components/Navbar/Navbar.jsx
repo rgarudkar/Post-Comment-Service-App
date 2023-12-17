@@ -1,6 +1,7 @@
 import { Button, Container, Flex, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+//UI for Navbar when user signs out 
 const Navbar = () => {
 	return (
 		<Container maxW={"container.lg"} my={4}>
@@ -22,5 +23,4 @@ const Navbar = () => {
 		</Container>
 	);
 };
-
 export default Navbar;

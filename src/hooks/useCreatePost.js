@@ -32,8 +32,8 @@ function useCreatePost() {
       if (userProfile.uid === authUser.uid)
         createPost({ ...newPost, id: postDocRefId });
       if (pathname !== "/" && userProfile.uid === authUser.uid)
-        addPost({ ...newPost, id: postDocRefId  });
-      showToast("Success", "Post created successfully", "success");
+        addPost({ ...newPost, id: postDocRefId  }); //Adds post 
+        showToast("Success", "Post created successfully", "success");
     } catch (error) {
       console.log(error)
       showToast(

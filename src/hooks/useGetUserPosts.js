@@ -5,6 +5,8 @@ import useUserProfileStore from "../store/userProfileStore";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { firestore } from "../firebase/firebase";
 import axios from "axios";
+
+//Function to fetch user posts and handle erros
 const useGetUserPosts = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { posts, setPosts } = usePostStore();
@@ -19,7 +21,7 @@ const useGetUserPosts = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/${userProfile.uid}/posts`
+          `http://localhost:5000/api/${userProfile.uid}/posts` //API Get request to get posts through user id
         );
         setPosts(response.data);
       } catch (error) {

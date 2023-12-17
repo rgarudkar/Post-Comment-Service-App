@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useFollowUser from "../../hooks/useFollowUser";
 import { timeAgo } from "../../utils/timeAgo";
 
+//UI for postheader which displays follow button, username, userprofile, time since post is created
 const PostHeader = ({ post, creatorProfile }) => {
 	const { handleFollowUser, isFollowing, isUpdating } = useFollowUser(post.createdBy);
 

@@ -120,7 +120,7 @@ app.post("/api/posts/create", async (req, res) => {
   try {
     const postDocRef = await postCollections.add(newPost);
     await userDocRef.update({ posts: FieldValue.arrayUnion(postDocRef.id) });
-    res.status(200).json({newPost: newPost, postDocRefId: postDocRef.id});
+    res.status(200).json({ newPost: newPost, postDocRefId: postDocRef.id });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal server error" });
@@ -132,7 +132,7 @@ app.post("/api/post/comment", async (req, res) => {
   if (!postId || !comment) {
     return res.status(400).json({ error: "Missing content or createdBy" });
   }
-  
+
   try {
     const postRef = db.collection("posts").doc(postId);
     await postRef.update({ comments: FieldValue.arrayUnion(comment) });

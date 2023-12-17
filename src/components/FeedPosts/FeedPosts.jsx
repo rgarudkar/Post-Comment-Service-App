@@ -2,6 +2,7 @@ import { Box, Container, Flex, Skeleton, SkeletonCircle, Text, VStack } from "@c
 import FeedPost from "./FeedPost";
 import useGetFeedPosts from "../../hooks/useGetFeedPosts";
 
+//UI to show posts on Homepage
 const FeedPosts = () => {
 	const { isLoading, posts } = useGetFeedPosts();
 

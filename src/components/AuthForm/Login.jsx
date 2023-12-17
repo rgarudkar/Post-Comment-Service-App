@@ -2,12 +2,14 @@ import { Alert, AlertIcon, Button, Input } from "@chakra-ui/react";
 import { useState } from "react";
 import useLogin from "../../hooks/useLogin";
 
+//function to login for users already having an account
 const Login = () => {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
   const { loading, error, login } = useLogin();
+  //UI of login page for users already having an account
   return (
     <>
       <Input
@@ -33,6 +35,7 @@ const Login = () => {
         </Alert>
       )}
       <Button
+        //login button
         w={"full"}
         colorScheme="blue"
         size={"sm"}
